@@ -1,11 +1,27 @@
 **NOTE: USE ONLY SET SHARE PATH ,SHARE PERMISSION ,OWNERSHIP IN ACL SETTING
 Create NAS disks disk1(for normal shares),disk2(for projct Quota) and BIO disk3(for ISCSI) .** 
 
-1.Create 5 shares on disk1 and 8 users 
-Shares:
-1.Artwork_Ingest 2.Raw_data 3.Final_data 4.Final_edit 5.Editor
-Users:
-1.artwork 2.admin 3.editor 4.satypal 5.nagendra 6.umesh 7. rahul 8.trendra
+## 1. Create 5 shares on disk1 and 8 users 
+
+### Shares:
+
+1. Artwork_Ingest 
+2. Raw_data 
+3. Final_data 
+4. Final_edit 
+5. Editor
+
+### Users:
+
+1. artwork 
+2. admin 
+3. editor 
+4. satypal 
+5. nagendra 
+6. umesh 
+7. rahul 
+8. trendra
+
 
 |share/users| Artwork_Ingest | Raw_data  |  Final_data |   Final_edit  |Editor|
 | :------- | ----: | :---: |:------:  | :-----:|:-----:|
@@ -21,17 +37,32 @@ Users:
 R—Read only
 RW—Read write both
 
-Take a screenshot of dispalying all users in FS2 and share
-user.png
-share.png
-upload in git
-login as  admin and create admin directory in all share and show propertly of admin folder in all share by right click and upload the image in git.
-artwork_ingest.png ,raw_data.png, final_data.png ,final_edit.png ,editor.png
+* Take a screenshot of dispalying all users in FS2 and share upload in git
 
-2.Create a share netweb on disk1 Give ownership to admin.
-Create two directory in netweb FBD and delhi , create two users rahul and umesh rahul can read write in delhi not in FBD , umesh can read write FBD but not in delhi.
-take screenshot of rahul access  delhi share name it rahul_delhi.png
-take a screenshot of failure access of rahul_fbd.png
+  - user.png
+  - share.png
+
+* login as  admin and create admin directory in all share and show property of admin folder in all share by right click and upload the image in git.
+
+  - artwork_ingest.png 
+  - raw_data.png 
+  - final_data.png 
+  - final_edit.png 
+  - editor.png
+
+## 2. Create a share netweb on disk1 Give ownership to admin.
+
+* Create two directory in netweb FBD and delhi 
+* rahul can do  
+  - Read write in delhi.
+  - Read only on FBD .
+* umesh can do 
+  - Read write on FBD.  
+  - Read Only on delhi.
+
+* take screenshot of rahul access  delhi share name it 
+  - rahul_delhi.png
+* take a screenshot of failure access of rahul_fbd.png
 
 set the limit for each user 10 GB.
 Login as rahul and try to copy 15 GB file error should come 
