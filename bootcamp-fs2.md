@@ -41,7 +41,7 @@
 R—Read only
 RW—Read write both
 
-* Take a screenshot of dispalying all users in FS2 and share upload in git
+* Take a screenshot of dispalying all users  and shares upload in git
 
   - user.png
   - share.png
