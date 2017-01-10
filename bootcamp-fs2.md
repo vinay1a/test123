@@ -1,7 +1,11 @@
-**NOTE: USE ONLY SET SHARE PATH ,SHARE PERMISSION ,OWNERSHIP IN ACL SETTING
-Create NAS disks disk1(for normal shares),disk2(for projct Quota) and BIO disk3(for ISCSI) .** 
+#### NOTE: USE ONLY SET SHARE PATH ,SHARE PERMISSION ,OWNERSHIP IN ACL SETTING
+## Create  DISKS 
+* NAS disks disk1 (normal shares)
+* disk2 (Share Quota) 
+* BIO disk3 ( ISCSI) . 
 
-## 1. Create 5 shares on disk1 and 8 users 
+## 1. Share Creation  
+* Create 5 shares on disk1 and 8 users 
 
 ### Shares:
 
@@ -50,7 +54,8 @@ RW—Read write both
   - final_edit.png 
   - editor.png
 
-## 2. Create a share netweb on disk1 Give ownership to admin.
+## 2. Access Restrictions  
+* Create a share netweb on disk1 Give ownership to admin.
 
 * Create two directory in netweb FBD and delhi 
 * rahul can do  
@@ -62,35 +67,54 @@ RW—Read write both
 
 * take screenshot of rahul access  delhi share name it 
   - rahul_delhi.png
-* take a screenshot of failure access of rahul_fbd.png
+* take a screenshot of failure access of FBD share name  it
+  - rahul_fbd.png
 
-set the limit for each user 10 GB.
-Login as rahul and try to copy 15 GB file error should come 
-take screen shot upload as rahul_limit.png
+* set the limit for each user 10 GB.
+* Login as rahul and  copy 15 GB file ; `error should be occured` take screen shot upload as 
+  - rahul_limit.png
 
-3.Create one share final, deny this share by specific IP
-try to login with one unrestricted IP and create one folder data upload access_ip.png
-try to login with restricted IP and upload screen shot deny_ip.png
+## 3. IP Risrictions  
+* Create a share final, deny this share by specific IP .`( mentiond in instructions sheet )`
+* login with unrestricted IP and create a folder  .  take screen shot and  uplaod as
+  - access_ip.png
+* login with restricted IP .`Error Should Occure` . Take the screen shot and  upload as 
+  - deny_ip.png
 
-4.Create ISCSI target and connect disk3 on it and access it on windows with the specific initiator .
-Take screenshot of Manage disk showing that disk upload image as iscsi_disk.png
+## 4. ISCSI 
+* Create ISCSI Target 
+* Add  disk3 to Target 
+* Access it on windows with the specific initiator .
+  - In windows Take screenshot of Manage disk showing that disk upload image as `iscsi_disk.png`
 
-5.On disk1 create any nfs share and mount it on linux system using nfs.
-Put the output of command df -h in nfs_mount.md file
+## 5. NFS
+* On disk1 create a nfs share and mount it on linux system using nfs.
+* Run command `df -h` keep the  output in `nfs_mount.md` file and  upload
 
-6.Configure one FTP share for Public aceess on disk1. (use share name NTIPL)
-upload ftp_public.png
-and secound share tyrone only authenticated user admin can read wirte
-upload ftp_user.png
+## 6. FTP
+* Configure a FTP share for Public aceess on disk1. (use share name NTIPL)
+* Take the  screenshot and uplaod ftp_public.png
+* Configure another share "tyrone", grant read wirte access to "admin"
+* Take the screen shot of  ftp client and upload ftp_user.png
 
-7.Lun masking iscsi initiator resticted to windows share in question 4 try to mount in linux system and put error in iscsi_lun_masking.md .
+## 7. ISCSI LUN Masking
+* Riscrict the Target which created  on Qestion 4  for  windows only access ( by giving the access to windows initiator only )
+* Access the  same target  on Linux system . Copy the error messsage  in iscsi_lun_masking.md and upload 
 
 
-8.In Question 1 do recycling and auditing enable on final_data create and delete few files from final data and upload image recycle.png and put output of message file from audit share in audit_log.md
+## 8. Recyclebin , Auditing
+* Enable  Recycling and auditing ( open file, delete file, create dir, RM dir) for final_data ( which created on question 1) .
+* copy the files  in to the sahre . 
+* Delete the uploaded  files  and  restore them from  Recycle bin .Take the screenshot "recycle.png" and  upload 
+* Download the  audit.log and  messages.log  copy them  in to audit_log.md  and  upload 
 
-9.Create Share FIT on disk2 and allow the admin with full permision on  it but this share should have the limit of 10 GB .
-Copy 15 GB data on this folder it will give error upload project_quota.png file.
 
-Bonus Questions:
-10.Connect ADS Server with FS2 .
-Create a share ADS_TEST give permission to peg user from ADS server on this share. 
+## 9. Share Quota
+* Create Share FIT on disk2 and allow the admin with full permision 
+* Set  the share Quota for 10GB.
+* Copy 15 GB data on this folder. `Error SHould occure`. Take the  screen shot of error to project_quota.png and  upload.
+
+# Bonus Questions:
+## 10. ADS Authentication 
+* Connect ADS Server with FS2 .( ADS details  given in  instructons sheet)
+* Create a share ADS_TEST give permission to peg user from ADS server on this share. 
