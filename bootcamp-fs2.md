@@ -1,11 +1,25 @@
 **NOTE: USE ONLY SET SHARE PATH ,SHARE PERMISSION ,OWNERSHIP IN ACL SETTING
 Create NAS disks disk1(for normal shares),disk2(for projct Quota) and BIO disk3(for ISCSI) .** 
 
-1.Create 5 shares on disk1 and 8 users 
-Shares:
-1.Artwork_Ingest 2.Raw_data 3.Final_data 4.Final_edit 5.Editor
-Users:
-1.artwork 2.admin 3.editor 4.satypal 5.nagendra 6.umesh 7. rahul 8.trendra
+## 1. Create 5 shares on disk1 and 8 users 
+### Shares:
+
+* Artwork_Ingest 
+* Raw_data 
+* Final_data 
+* Final_edit 
+* Editor
+
+### Users:
+
+* artwork 
+* admin 
+* editor 
+* satypal 
+* nagendra 
+* umesh 
+* rahul 
+* trendra
 
 |share/users| Artwork_Ingest | Raw_data  |  Final_data |   Final_edit  |Editor|
 | :------- | ----: | :---: |:------:  | :-----:|:-----:|
