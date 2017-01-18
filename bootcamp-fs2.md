@@ -104,7 +104,7 @@ RW—Read write both
 
 ## 8. Recyclebin , Auditing
 * Enable  Recycling and auditing ( open file, delete file, create dir, RM dir) for final_data ( which created on question 1) .
-* copy the files  in to the sahre . 
+* copy the files  in to the share . 
 * Delete the uploaded  files  and  restore them from  Recycle bin .Take the screenshot "recycle.png" and  upload 
 * Download the  audit.log and  messages.log  copy them  in to audit_log.md  and  upload 
 
